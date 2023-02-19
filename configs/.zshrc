@@ -9,7 +9,10 @@ export ZSH=$HOME/.oh-my-zsh
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # $ZSH/themes/
-ZSH_THEME="archcraft"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+if [[ -f $HOME/.p10k.zsh ]];then
+  source $HOME/.p10k.zsh
+fi
 
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
@@ -104,4 +107,4 @@ alias "clip=xclip -selection clipboard"
 alias "snvim=sudo -E nvim"
 alias "nconf=nvim ~/.config/nvim"
 alias "yt-dlp-music=yt-dlp -x --audio-format mp3 --embed-thumbnail"
-source('~/.zshrc_secret.zsh')
+source ~/.zshrc_secret.zsh

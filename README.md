@@ -2,7 +2,7 @@
 Applied using stow.
 Arch linux was used, might not work well under others linux distributions that are not rolling release.
 
-There is configs and scripts for the following softwares
+There are configs and scripts for the following softwares
 - zsh
 - bspwm
 - rofi 
