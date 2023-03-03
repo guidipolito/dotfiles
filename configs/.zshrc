@@ -107,4 +107,5 @@ alias "clip=xclip -selection clipboard"
 alias "snvim=sudo -E nvim"
 alias "nconf=nvim ~/.config/nvim"
 alias "yt-dlp-music=yt-dlp -x --audio-format mp3 --embed-thumbnail"
+alias sail='[ -f sail ] && sudo sh sail || sudo sh vendor/bin/sail'
 source ~/.zshrc_secret.zsh

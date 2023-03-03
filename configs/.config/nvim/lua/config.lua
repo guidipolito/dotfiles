@@ -42,6 +42,15 @@ vim.cmd[[
   set foldmethod=indent
 ]]
 
+if vim.g.neovide then 
+    local opts = { 
+        silent = true, 
+        noremap = true
+    }
+    vim.keymap.set( { "n", "v" }, "<D-v>", "\"*p", opts)
+    vim.keymap.set( { "n", "v" }, "<D-c>", "\"*y", opts)
+end
+
 
 set.termguicolors = true -- Enable GUI colors for the terminal to get truecolor
 set.list = false -- show whitespace

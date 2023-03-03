@@ -34,4 +34,8 @@ local react = {
         { i(1), rep(1), i(2) }
     )),
 }
+local blade = {
+    s("@if", fmt("@if({})\n\t{}\n@endif", { i(1), i(2) })) 
+}
 ls.add_snippets("javascriptreact", react )
+ls.add_snippets("blade", blade)

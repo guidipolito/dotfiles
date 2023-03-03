@@ -139,6 +139,11 @@ _G.packer_plugins = {
     path = "/home/dipolito/.local/share/nvim/site/pack/packer/start/editorconfig.nvim",
     url = "https://github.com/gpanders/editorconfig.nvim"
   },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/home/dipolito/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
   ["feline.nvim"] = {
     loaded = true,
     path = "/home/dipolito/.local/share/nvim/site/pack/packer/start/feline.nvim",

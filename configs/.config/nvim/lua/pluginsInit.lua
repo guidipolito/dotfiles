@@ -41,11 +41,11 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
   use "famiu/nvim-reload" -- add command: lua require"nvim-reload".Restart()
-
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+  use "mattn/emmet-vim" -- html shortcuts
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
@@ -61,6 +61,7 @@ return packer.startup(function(use)
   use 'norcalli/nvim-colorizer.lua'
 
   use "glepnir/dashboard-nvim"
+  use "jwalton512/vim-blade"
 
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
@@ -101,7 +102,10 @@ return packer.startup(function(use)
 
   -- motion
   use 'ggandor/lightspeed.nvim'
-  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+  use({ "iamcco/markdown-preview.nvim", 
+    run = "cd app && npm install", 
+    setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, 
+  })
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   --
