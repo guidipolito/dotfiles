@@ -49,7 +49,7 @@ vim.g.mapleader = " "
 -- =================
 -- Terminal bindings
 -- =================
-    map("n","<Leader>t", "<cmd>TermExec direction=float <cr>")
+    map("n","<Leader>t", "<cmd>ToggleTerm direction=float <cr>")
     map("n","<Leader>gg", "<cmd>TermExec direction=float cmd='lazygit'<cr>")
     map("n","<Leader>\\", "<cmd>TermExec direction='float'<cr>")
 
@@ -60,3 +60,16 @@ map("n", "<Leader>lh", function() vim.lsp.buf.hover() end)
 map("n", "<Leader>lr", function() vim.lsp.buf.references() end)
 map("n", "<Leader>li", function() vim.lsp.buf.implementation() end)
 map("n", "<Leader>lf", function() vim.lsp.buf.format() end)
+
+-- =================
+-- Neovide
+-- =================
+if(vim.g.neovide)then
+    map("c", "<c-v>", "<c-r>+")
+    function adjustFontSize(amount)
+        vim.g.fontsize = vim.g.fontsize+amount
+        vim.g.updateFont()
+    end
+    map("n", "<C-=>", function() adjustFontSize(1) end)
+    map("n", "<C-->", function() adjustFontSize(-1) end)
+end

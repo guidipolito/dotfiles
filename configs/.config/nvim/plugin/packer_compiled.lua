@@ -290,6 +290,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dipolito/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-blade"] = {
+    loaded = true,
+    path = "/home/dipolito/.local/share/nvim/site/pack/packer/start/vim-blade",
+    url = "https://github.com/jwalton512/vim-blade"
   }
 }
 

@@ -1,57 +1,43 @@
-vim.cmd[[
-let g:aurora_transparent = 1     " transparent
-colorscheme aurora 
-]]
-
-
 local exec = vim.api.nvim_exec -- execute Vimscript
 local set = vim.opt -- global options
 local cmd = vim.cmd -- execute Vim commands
 
 set.showmode = false
 
+-- =================
+-- Colorscheme
+-- =================
+vim.g.aurora_transparent = 1
+cmd[[colorscheme hydrangea-vim]]
 
-vim.cmd[[
-  let s:guifontsize=13
-  let s:guifont="FantasqueSansMono\\ Nerd\\ Font"
-  set guifont=FantasqueSansMono\ Nerd\ Font:h12
-
-  let g:neovide_refresh_rate=75
-  let g:neovide_transparency=0.95
-  let g:neovide_no_idle=v:false
-  let g:neovide_fullscreen=v:false
-  let g:neovide_cursor_animation_length=0.04
-  let g:neovide_cursor_trail_sizeh=0.4
-  let g:neovide_cursor_antialiasing=v:true
-  let g:neovide_cursor_vfx_mode = "pixiedust"
-  let g:neovide_cursor_vfx_opacity=200.0
-  let g:neovide_cursor_vfx_particle_lifetime=1.2
-  let g:neovide_cursor_vfx_particle_density=190.0
-  let g:neovide_cursor_vfx_particle_speed=13.0
-  let g:neovide_cursor_vfx_particle_phase=1.5
-  let g:neovide_cursor_vfx_particle_curl=1.25
-  function! AdjustFontSize(amount)
-  let s:guifontsize = s:guifontsize + a:amount
-  execute "set guifont=" .. s:guifont .. ":h" .. s:guifontsize
-  echo s:guifontsize
-  endfunction
-
-  nnoremap <C-=> <cmd>call AdjustFontSize(+1)<cr>
-  nnoremap <C--> <cmd>call AdjustFontSize(-1)<cr>
-
-  set foldmethod=indent
-]]
-
-if vim.g.neovide then 
-    local opts = { 
-        silent = true, 
-        noremap = true
-    }
-    vim.keymap.set( { "n", "v" }, "<D-v>", "\"*p", opts)
-    vim.keymap.set( { "n", "v" }, "<D-c>", "\"*y", opts)
+-- =================
+-- Neovide
+-- =================
+vim.g.guifont = "FantasqueSansMono\\ Nerd\\ Font"
+vim.g.fontsize = 11
+vim.g.updateFont = function()
+    vim.cmd("set guifont="..vim.g.guifont .. ':h' .. vim.g.fontsize)
 end
+vim.g.updateFont()
+vim.g.neovide_refresh_rate=75
+vim.g.neovide_transparency=0.95
+vim.g.neovide_no_idle=false
+vim.g.neovide_fullscreen=false
+vim.g.neovide_cursor_animation_length=0.04
+vim.g.neovide_cursor_trail_sizeh=0.4
+vim.g.neovide_cursor_antialiasing=true
+vim.g.neovide_cursor_vfx_mode = "pixiedust"
+vim.g.neovide_cursor_vfx_opacity=200.0
+vim.g.neovide_cursor_vfx_particle_lifetime=1.2
+vim.g.neovide_cursor_vfx_particle_density=190.0
+vim.g.neovide_cursor_vfx_particle_speed=13.0
+vim.g.neovide_cursor_vfx_particle_phase=1.5
+vim.g.neovide_cursor_vfx_particle_curl=1.25
+set.foldmethod="indent"
 
-
+-- =================
+-- Vim opts
+-- =================
 set.termguicolors = true -- Enable GUI colors for the terminal to get truecolor
 set.list = false -- show whitespace
 set.listchars = {
