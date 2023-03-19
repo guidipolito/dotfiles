@@ -17,6 +17,8 @@ configuration {
     display-window:             "WINDOW";
 	drun-display-format:        "{name}";
 	window-format:              "{w} · {c} · {t}";
+  hover-select: true;
+  ma-accept-entry: "MousePrimary";
 }
 
 /*****----- Global Properties -----*****/

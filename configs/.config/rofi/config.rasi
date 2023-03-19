@@ -174,8 +174,9 @@ configuration {
 	ml-row-right: "ScrollRight";
 	ml-row-up: "ScrollUp";
 	ml-row-down: "ScrollDown";
-	me-select-entry: "MousePrimary";
-	me-accept-entry: "MouseDPrimary";
+	me-select-entry: "";
+    hover-select: true;
+	me-accept-entry: ["MouseDPrimary", "MousePrimary", "MouseSecondary"];
 	me-accept-custom: "Control+MouseDPrimary";
 */
 }
