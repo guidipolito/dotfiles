@@ -59,7 +59,7 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use 'norcalli/nvim-colorizer.lua'
-
+  use "lambdalisue/suda.vim"
   use "glepnir/dashboard-nvim"
   use "jwalton512/vim-blade"
 
