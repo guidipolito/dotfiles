@@ -56,20 +56,21 @@ vim.g.mapleader = " "
 -- =================
 -- Lsp
 -- =================
-map("n", "<Leader>lh", function() vim.lsp.buf.hover() end)
-map("n", "<Leader>lr", function() vim.lsp.buf.references() end)
-map("n", "<Leader>li", function() vim.lsp.buf.implementation() end)
-map("n", "<Leader>lf", function() vim.lsp.buf.format() end)
+    map("n", "<Leader>lh", function() vim.lsp.buf.hover() end)
+    map("n", "<Leader>lr", function() vim.lsp.buf.references() end)
+    map("n", "<Leader>li", function() vim.lsp.buf.implementation() end)
+    map("n", "<Leader>lf", function() vim.lsp.buf.format() end)
+    map("n", "<Leader>ld", function() vim.lsp.buf.definition() end)
 
 -- =================
 -- Neovide
 -- =================
-if(vim.g.neovide)then
-    map("c", "<c-v>", "<c-r>+")
-    function adjustFontSize(amount)
-        vim.g.fontsize = vim.g.fontsize+amount
-        vim.g.updateFont()
+    if(vim.g.neovide)then
+        map("c", "<c-v>", "<c-r>+")
+        function adjustFontSize(amount)
+            vim.g.fontsize = vim.g.fontsize+amount
+            vim.g.updateFont()
+        end
+        map("n", "<C-=>", function() adjustFontSize(1) end)
+        map("n", "<C-->", function() adjustFontSize(-1) end)
     end
-    map("n", "<C-=>", function() adjustFontSize(1) end)
-    map("n", "<C-->", function() adjustFontSize(-1) end)
-end
