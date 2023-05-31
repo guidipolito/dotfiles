@@ -159,6 +159,6 @@ require('telescope').load_extension('emoji')
 require"plugins.nvimTest"
 
 require('editorconfig')
-require"gitsign".setup{}
+require"gitsigns".setup{}
 
 end)

@@ -3,6 +3,8 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+PATH="$PATH:$HOME/.local/bin:/usr/local/bin/python"
+export PATH=~/.npm-global/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -98,6 +100,7 @@ add-zsh-hook -Uz precmd rehash_precmd
 export SHELL="/bin/zsh"
 export EDITOR="nvim"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
+export WLR_NO_HARDWARE_CURSORS=1
 
 # ======================
 #         alias
@@ -107,5 +110,5 @@ alias "clip=xclip -selection clipboard"
 alias "snvim=sudo -E nvim"
 alias "nconf=nvim ~/.config/nvim"
 alias "yt-dlp-music=yt-dlp -x --audio-format mp3 --embed-thumbnail"
-alias sail='[ -f sail ] && sudo sh sail || sudo sh vendor/bin/sail'
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
 source ~/.zshrc_secret.zsh
