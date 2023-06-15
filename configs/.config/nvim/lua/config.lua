@@ -8,7 +8,7 @@ set.showmode = false
 -- Colorscheme
 -- =================
 vim.g.aurora_transparent = 1
-cmd[[colorscheme tokyonight-night]]
+cmd[[colorscheme aurora]]
 
 -- =================
 -- Neovide

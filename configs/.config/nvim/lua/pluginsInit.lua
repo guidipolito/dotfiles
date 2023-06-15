@@ -119,7 +119,10 @@ return packer.startup(function(use)
       "williamboman/mason.nvim",
       run = ":MasonUpdate" -- :MasonUpdate updates registry contents
   }
-
+  use{
+      'MunifTanjim/prettier.nvim',
+      setup = require('prettier').setup{}
+  }
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
