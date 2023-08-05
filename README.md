@@ -1,10 +1,10 @@
-# Dotfiles
+    # Dotfiles
 Applied using stow.
 Arch linux was used, might not work well under others linux distributions that are not rolling release.
 
 There are configs and scripts for the following softwares
 - zsh
-- bspwm
+- bspwm or awesomewm
 - rofi 
 - stow
 - polybar
@@ -16,6 +16,7 @@ There are configs and scripts for the following softwares
 - ranger
 - picom
 - nitrogen
+- evremap-git
 
 ## Installation
 This installations is just about linking the config files to the right place and adding stuff to oh-my-zsh, so, just paste in your term

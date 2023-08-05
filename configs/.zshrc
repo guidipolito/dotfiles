@@ -2,6 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
+export $(dbus-launch)
 export ZSH=$HOME/.oh-my-zsh
 PATH="$PATH:$HOME/.local/bin:/usr/local/bin/python"
 export PATH=~/.npm-global/bin:$PATH
@@ -101,6 +102,7 @@ export SHELL="/bin/zsh"
 export EDITOR="nvim"
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
 export WLR_NO_HARDWARE_CURSORS=1
+export TerminalEmulator="alacritty"
 
 # ======================
 #         alias
