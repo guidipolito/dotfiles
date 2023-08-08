@@ -267,4 +267,18 @@ clientbuttons = gears.table.join(
     end)
 )
 
+-- Bind screen keys 
+-- set up keybindings based on existing monitors
+for s in screen do
+  for screen_name, _ in pairs(s.outputs) do
+    if screen_name == "eDP-1" then
+      globalkeys = awful.util.table.join(globalkeys,
+          awful.key({ modkey }, "F1", function() awful.screen.focus(s) end))
+    elseif screen_name == "HDMI-1" then
+      globalkeys = awful.util.table.join(globalkeys,
+          awful.key({modkey}, "F2", function() awful.screen.focus(s) end))
+    end
+  end
+end
+
 root.keys(globalkeys)
