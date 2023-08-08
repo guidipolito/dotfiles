@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export $(dbus-launch)
 export ZSH=$HOME/.oh-my-zsh
-PATH="$PATH:$HOME/.local/bin:/usr/local/bin/python"
+PATH="$PATH:$HOME/.local/bin:/usr/local/bin/python:$HOME/.local/share/gem/ruby/3.0.0/bin"
 export PATH=~/.npm-global/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
