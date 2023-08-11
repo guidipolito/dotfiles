@@ -117,6 +117,9 @@ return packer.startup(function(use)
       "williamboman/mason.nvim",
       run = ":MasonUpdate" -- :MasonUpdate updates registry contents
   }
+
+  use "LunarVim/bigfile.nvim"
+
   use{
       'prettier/vim-prettier',
   }
@@ -159,5 +162,5 @@ require"plugins.nvimTest"
 
 require('editorconfig')
 require"gitsigns".setup{}
-
+require"bigfile".setup{}
 end)
