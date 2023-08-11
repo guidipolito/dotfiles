@@ -5,22 +5,22 @@
 font:
   # Normal (roman) font face
   normal:
-    family: "SpaceMono Nerd Font Mono"
+    family: "FantasqueSansM Nerd Font"
     style: Regular
 
   # Bold font face
   bold:
-    family: "SpaceMono Nerd Font Mono"
+    family: "FantasqueSansM Nerd Font"
     style: Bold
 
   # Italic font face
   italic:
-    family: "SpaceMono Nerd Font Mono"
+    family: "FantasqueSansM Nerd Font"
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: "SpaceMono Nerd Font Mono"
+    family: "FantasqueSansM Nerd Font"
     style: Bold Italic
 
   # Point size
