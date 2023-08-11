@@ -142,6 +142,14 @@ globalkeys = gears.table.join(
         function() awful.spawn.with_shell("firefox") end,
         { description = "Firefox", group = "apps" }
     ),
+    awful.key({ }, "Print",
+        function() awful.spawn.with_shell("flameshot gui") end,
+        { description = "Flameshot", group = "apps" }
+    ),
+    awful.key({ modkey }, "v",
+        function() awful.spawn.with_shell("copyq show") end,
+        { description = "Clipboard manager (copyq)", group = "apps" }
+    ),
     awful.key({ modkey, "Shift" }, "f",
         function() awful.spawn.with_shell("thunar") end,
         { description = "Thunar", group = "apps" }

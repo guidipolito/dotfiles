@@ -226,7 +226,7 @@ client.connect_signal("request::titlebars", function(c)
         },
         { -- Right
             -- awful.titlebar.widget.floatingbutton (c),
-            -- awful.titlebar.widget.maximizedbutton(c),
+            awful.titlebar.widget.maximizedbutton(c),
             awful.titlebar.widget.stickybutton(c),
             -- awful.titlebar.widget.ontopbutton    (c),
             awful.titlebar.widget.closebutton(c),
@@ -244,10 +244,10 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- Application and daemon start
-awful.spawn.with_shell("killall pulseaudio greenclip picom nm-applet blueman-applet")
+awful.spawn.with_shell("killall picom nm-applet copyq")
 awful.spawn.with_shell("pulseaudio &")
 awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("greenclip daemon &")
+awful.spawn.with_shell("copyq &")
 awful.spawn.with_shell("\
     if [[ ! `pidof lxsession` ]]; then\
         lxsession &\
@@ -255,5 +255,4 @@ awful.spawn.with_shell("\
 ")
 awful.spawn.with_shell("picom --experimental-backends --config=$HOME/.config/picom.conf")
 awful.spawn.with_shell("nm-applet")
--- awful.spawn("blueman-applet &")
 awful.spawn("setxkbmap br")

@@ -17,6 +17,7 @@ There are configs and scripts for the following softwares
 - picom
 - nitrogen
 - evremap-git
+- copyq
 
 ## Installation
 This installations is just about linking the config files to the right place and adding stuff to oh-my-zsh, so, just paste in your term
