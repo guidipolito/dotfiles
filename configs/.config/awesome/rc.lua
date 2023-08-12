@@ -10,6 +10,7 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
+naughty.config.defaults['icon_size'] = 100
 --Menu
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
@@ -22,7 +23,7 @@ if awesome.startup_errors then
     naughty.notify({
         preset = naughty.config.presets.critical,
         title = "Oops, there were errors during startup!",
-        text = awesome.startup_errors
+        text = awesome.startup_errors,
     })
 end
 
@@ -245,7 +246,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- Application and daemon start
 awful.spawn.with_shell("killall picom nm-applet copyq")
-awful.spawn.with_shell("pulseaudio &")
+awful.spawn.with_shell("pulseaudio --start")
 awful.spawn.with_shell("nitrogen --restore")
 awful.spawn.with_shell("copyq &")
 awful.spawn.with_shell("\

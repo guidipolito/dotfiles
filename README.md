@@ -4,14 +4,10 @@ Arch linux was used, might not work well under others linux distributions that a
 
 There are configs and scripts for the following softwares
 - zsh
-- bspwm or awesomewm
-- rofi 
+- awesomewm
 - stow
-- polybar
-- mpd 
 - alacritty
 - flameshot
-- dunst
 - nvim
 - ranger
 - picom
@@ -23,6 +19,6 @@ There are configs and scripts for the following softwares
 This installations is just about linking the config files to the right place and adding stuff to oh-my-zsh, so, just paste in your term
 
 ```
-git clone https://github.com/guidipolito/dotfiles.git && cd dotfiles && chmod +x apply.sh && ./apply.sh
+git clone --recurse-submodules https://github.com/guidipolito/dotfiles.git && cd dotfiles && chmod +x apply.sh && ./apply.sh
 ```
 
