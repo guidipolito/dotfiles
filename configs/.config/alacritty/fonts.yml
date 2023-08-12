@@ -9,26 +9,26 @@ font:
     style: Regular
 
   # Bold font face
-  bold:
-    family: "FantasqueSansM Nerd Font"
-    style: Bold
+  #bold:
+  #  family: "FantasqueSansM Nerd Font"
+  #  style: Bold
 
   # Italic font face
-  italic:
-    family: "FantasqueSansM Nerd Font"
-    style: Italic
+  #italic:
+  #  family: "FantasqueSansM Nerd Font"
+  #  style: Italic
 
   # Bold italic font face
-  bold_italic:
-    family: "FantasqueSansM Nerd Font"
-    style: Bold Italic
+  #bold_italic:
+  #  family: "FantasqueSansM Nerd Font"
+  #  style: Bold Italic
 
   # Point size
   size: 11
 
   # Offset
   #offset:
-  #  x: 0
+  #  x: 4
   #  y: 0
 
   # Glyph offset
