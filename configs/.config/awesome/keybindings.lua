@@ -146,6 +146,10 @@ globalkeys = gears.table.join(
         function() awful.spawn.with_shell("flameshot gui") end,
         { description = "Flameshot", group = "apps" }
     ),
+    awful.key({ modkey, "Control" }, "p",
+        function() awful.spawn.with_shell("gpick -p") end,
+        { description = "Color picker", group = "apps" }
+    ),
     awful.key({ modkey }, "v",
         function() awful.spawn.with_shell("copyq show") end,
         { description = "Clipboard manager (copyq)", group = "apps" }
