@@ -48,6 +48,7 @@ set.listchars = {
     trail = '•', -- BULLET (U+2022, UTF-8: E2 80 A2)
     space = ' '
 }
+vim.opt.termguicolors = true
 
 set.fillchars = {
     diff = '∙', -- BULLET OPERATOR (U+2219, UTF-8: E2 88 99)
