@@ -68,7 +68,7 @@ return packer.startup(function(use)
     use {
         "williamboman/mason.nvim",
         run = ":MasonUpdate",
-        -- config = function() require "mason".setup {} end
+        config = function() require "mason".setup {} end
     }
     use "williamboman/mason-lspconfig.nvim"
     use { "hrsh7th/nvim-cmp", config = function() require "plugins.cmp" end }
@@ -134,6 +134,15 @@ return packer.startup(function(use)
         'prettier/vim-prettier',
     }
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+
+    use { "CRAG666/code_runner.nvim", config = function()
+        require"code_runner".setup{
+            filetype = {
+                ruby = "ruby $file",
+            }
+        }
+    end}
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

@@ -76,3 +76,14 @@ vim.g.mapleader = " "
         map("n", "<C-=>", function() adjustFontSize(1) end)
         map("n", "<C-->", function() adjustFontSize(-1) end)
     end
+
+-- =================
+-- Runner
+-- =================
+map('n', '<Leader>r', ':RunCode<CR>', { noremap = true, silent = false })
+map('n', '<Leader>rf', ':RunFile<CR>', { noremap = true, silent = false })
+map('n', '<Leader>rt', ':RunFile tab<CR>', { noremap = true, silent = false })
+map('n', '<Leader>rp', ':RunProject<CR>', { noremap = true, silent = false })
+map('n', '<Leader>rc', ':RunClose<CR>', { noremap = true, silent = false })
+--map('n', '<Leader>crf', ':CRFiletype<CR>', { noremap = true, silent = false })
+--map('n', '<Leader>crp', ':CRProjects<CR>', { noremap = true, silent = false })

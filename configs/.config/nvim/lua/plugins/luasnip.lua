@@ -12,6 +12,7 @@ local fmt = require("luasnip.extras.fmt").fmt
 
 -- Add snippets from friendly-snippets plugin
 require("luasnip.loaders.from_vscode").lazy_load({ path = './snippets'})
+ls.filetype_extend("ruby", {"rails"})
 
 ls.config.set_config {
     -- Remember last snippet to jump back
